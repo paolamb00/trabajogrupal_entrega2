@@ -5,13 +5,11 @@ let almacenaItems = [];
 btnagregar.addEventListener("click",function(){
     let item = document.getElementById("item").value;
     localStorage.setItem("item", item)
-    almacenaItems = localStorage.getItem("item")
-    console.log(almacenaItems.length);
-
+    almacenaItems.push(localStorage.getItem("item")) 
     let htmlContentToAppend = "";
 
-    for(let i = 1; i < almacenaItems.length; i++){ 
-        let elemento = almacenaItems[i] 
+    for(let i = 0; i < almacenaItems.length; i++){ 
+        let elemento = almacenaItems[i]
         htmlContentToAppend += `
         <li class="border border-start-0" >`+ elemento  +  `</li>
 
