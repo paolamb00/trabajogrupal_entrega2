@@ -11,12 +11,13 @@ btnagregar.addEventListener("click",function(){
 
     for(let i = 0; i < almacenaItems.length; i++){ 
         let elemento = almacenaItems[i]
+        if(almacenaItems[i]){
         htmlContentToAppend += `
         <li class="border border-start-0" >`+ elemento  +  `</li>
 
         `
         document.getElementById("contenedor").innerHTML = htmlContentToAppend; 
-        document.getElementById("item").value = ""
+        document.getElementById("item").value = "" }
     }
 
 
