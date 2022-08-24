@@ -1,6 +1,7 @@
 const btnagregar = document.getElementById("agregar");
 const limpiar = document.getElementById("limpiar")
 let almacenaItems = [];
+const lista = document.getElementById("contenedor")
 
 
 btnagregar.addEventListener("click",function(){
@@ -32,3 +33,9 @@ limpiar.addEventListener("click",function(){
     }
 })
 
+function recuperoValores(){
+    item.value = localStorage.getItem("item")
+    lista.innerHTML += almacenaItems.length;
+}
+
+document.addEventListener("DOMContentLoaded", recuperoValores()); //esto es para que se muestre, pero me parece que se está sobreescribiendo.
